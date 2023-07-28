@@ -1,0 +1,1880 @@
+/*#region Cuerpo del documento, header, footer, barra lateral*/
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    background-color: black;
+}
+header{
+    position: relative;
+    background-color: #787878;
+    height: 30px;
+    width: 100%;
+}
+footer {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    text-align: center;
+    background-color: #787878;
+    color: black;
+    height: 30px;
+  }
+footer p{
+    font-weight: bold;
+    margin-top: 5px;
+}
+.cloud-navigator{
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    width: 75px;
+    bottom: 0%;
+    background-color: #262626;
+    border-color:#FF8C00 ;
+    padding-top: 5px;
+}
+.cloud-navigator img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+}
+.cloud-navigator h1{
+    color: white;
+    font-size: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.cloud-navigator button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    margin-top: 25px;
+    background-color: #262626;
+    border: none;
+}
+.cloud-navigator button:hover{
+    cursor: pointer;
+    background-color: #262626;
+}
+.cloud-navigator button:enabled{
+    border: none;
+    outline: none;
+}
+/*#endregion*/
+
+/*#region Barra superior de contacto*/
+.social{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 8px;
+}
+.social img{
+    width: 18px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.social h1{
+    display: inline;
+    margin-left: 10px;
+    vertical-align: 10%;
+}
+.social-left{
+    float: left;
+}
+.social-right{
+    float:right;
+}
+/*#endregion*/
+
+/*#region Navegador superior*/
+#superior-nav{
+    margin-top: 30px;
+}
+    /*#region Selector de parte del proyecto*/
+    .nav-bar{
+        position: relative;
+        text-align: center;
+    }
+    .nav-bar button{
+        width: 100px;
+        height: 65px;
+        background-color:#494a49;
+        border-color:#494a49 ;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+    .nav-bar img{
+        position: relative;
+        height: 85%;
+        width: 60px;
+    }
+    .box-size-nav{
+        display: inline;
+    }
+    .pallet-selection-nav{
+        display: inline;
+    }
+    .box-placement-nav{
+        display: inline;
+    }
+    .layers-nav{
+        display: inline;
+    }
+
+    /*#endregion*/
+
+    /*#region Botón Configuración */
+    .configuration{
+        position: absolute;
+        right: 0%;
+        top: 55px;
+        margin-right: 10%;
+    }
+    .configuration button{
+        width: 100px;
+        height: 75px;
+        background-color:#494a49;
+        border-color:#494a49 ;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+    }
+    .configuration img{
+        height: 45px;
+    }
+
+    /*#endregion*/
+
+    /*#region Volver a tamaño de caja*/
+    .back{
+        position: absolute;
+        left: 0%;
+        top: 55px;
+        margin-left: 10%;
+    }
+    .back button{   
+        width: 100px;
+        height: 75px;
+        background-color:#494a49;
+        border-color:#494a49 ;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+    }
+    .back img{
+        margin-top: 7.5px;
+        height: 35px;
+        float: left;
+    }
+    .back h1{
+        font-family: 'Roboto', sans-serif;
+        color:darkorange;
+        font-weight:bolder;
+        font-size: 18px;
+    }
+    /*#endregion*/
+
+/*#endregion*/
+
+/*#region Elementos de interfaz*/
+#gui-elements{
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+    /*#region Descripción del proyecto*/
+
+        /*#region Título + Div general*/
+        .project-description{
+            display: block;
+            position: relative;
+            margin-top: 10%;
+            margin-left: 10%;
+            width: 80%;
+            text-align: center;
+            background-color:#494a49;
+            border-color:#494a49 ;
+            border-radius: 10px;
+            padding-top: 5px;
+        }
+        .project-description h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            color: white;
+        }
+        .project-description h2{
+            margin-top:80px;
+            margin-left: 25px;
+            font-weight: bolder;
+            color: white;
+        }
+        /*#endregion*/
+
+        /*#region Nombre de proyecto*/
+        .project-name{
+            margin-bottom:80px;
+        }
+        .project-name input{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50%;
+            height: 25px;
+            margin-right: 20%;
+            float: left;
+            margin-left: 25%;
+            padding-left: 20px;
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+        .project-name select{          
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Texto del proyecto */
+        .project-text{
+            margin-bottom:80px;
+        }
+        .project-text textarea{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50%;
+            height: 20%;
+            margin-right: 20%;
+            float: left;
+            margin-left: 25%;
+            padding: 20px;
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+
+        /*#endregion*/
+
+        /*#region Continuar a exportación*/
+        .next-button-project-description{
+            margin-left: 5%;
+        }
+        .next-button-project-description button{
+            font-family: 'Roboto', sans-serif;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            width: 50%;
+            background-color:royalblue;
+            border-color:royalblue ;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+        .next-button-project-description h1{
+            font-family: 'Roboto', sans-serif;
+            margin-left: 0px;
+        }
+        /*#endregion*/
+
+    /*#endregion*/
+
+    /*#region Tamaño de caja*/
+        /*#region Título + Div general + Selección de unidades*/
+        .box-size{
+            display: block;
+            position: relative;
+            margin-top: 25px;
+            margin-right: 20%;
+            width: 300px;
+            background-color:#494a49;
+            border-color:#494a49 ;
+            border-radius: 10px;
+            padding-top: 5px;
+        }
+        .box-size h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            color: white;
+        }
+        .box-size h2{
+            margin-top:80px;
+            margin-left: 25px;
+            font-weight: bolder;
+            color: white;
+        }
+        .unit-mesurement-input select{
+            float: right;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 80px;
+            height: 25px;
+            margin-top: -46px;
+            margin-right: 15px;
+            padding-left: 15px;
+            background-color:#5e5e5e;
+            border-color:#494a49 ;
+            color: white;
+            border-radius: 10px;
+            outline: none;
+        }
+        .unit-weight-input select{
+            position: absolute;
+            right: 0%;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 70px;
+            height: 25px;
+            margin-top: 240px;
+            margin-right: 15px;
+            padding-left: 20px;
+            background-color:#5e5e5e;
+            border-color:#494a49 ;
+            color: white;
+            border-radius: 10px;
+            outline: none;
+        }
+        /*#endregion*/
+
+        /*#region Largo de caja*/
+        .box-lenght h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .box-lenght input{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50%;
+            height: 25px;
+            margin-right: 20px;
+            float: left;
+            margin-left: 25px;
+            padding-left: 20px;  
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+        }
+        .box-lenght select{
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Ancho de caja*/
+        .box-width{
+            margin-top: 60px;
+        }
+        .box-width h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .box-width input{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50%;
+            height: 25px;
+            margin-right: 20px;
+            float: left;
+            margin-left: 25px;
+            padding-left: 20px;       
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+        }
+        .box-width select{
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Alto de caja*/
+        .box-height{
+            margin-top: 60px;
+        }
+        .box-height h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .box-height input{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50%;
+            height: 25px;
+            margin-right: 20px;
+            float: left;
+            margin-left: 25px;
+            padding-left: 20px;
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+        }
+        .box-height select{
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Masa de caja*/
+        .box-mass{
+            margin-top: 60px;
+        }
+        .box-mass h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .box-mass input{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50%;
+            height: 25px;
+            margin-right: 20px;
+            float: left;
+            margin-left: 25px;
+            padding-left: 20px;
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+        }
+        .box-mass select{
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Etiqueta frontal*/
+        .front-label h1{
+            padding-top: 5px;
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .front-label input{
+            margin-left: 15px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50px;
+            height: 25px;
+            float: left;
+
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+        }
+        .front-label input, :checked{
+            padding-left: 20px;
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Etiqueta derecha*/
+        .right-label h1{
+            padding-top: 5px;
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .right-label input{
+            margin-left: 15px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50px;
+            height: 25px;
+            float: left;
+
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+        }
+        .right-label input, :checked{
+            padding-left: 20px;
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Etiqueta izquierda*/
+        .left-label h1{
+            padding-top: 5px;
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .left-label input{
+            margin-left: 15px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50px;
+            height: 25px;
+            float: left;
+
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+        }
+        .left-label input, :checked{
+            padding-left: 20px;
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Etiqueta trasera*/
+        .back-label h1{
+            padding-top: 5px;
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .back-label input{
+            margin-left: 15px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50px;
+            height: 25px;
+            float: left;
+
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+        }
+        .back-label input, :checked{
+            padding-left: 20px;
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Continuar a configuración del pallet*/
+        .next-button-box-size button{
+            font-family: 'Roboto', sans-serif;
+            margin-left: 10%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            width: 80%;
+            background-color:royalblue;
+            border-color:royalblue ;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+        .next-button-box-size h1{
+            font-family: 'Roboto', sans-serif;
+            margin-left: 0px;
+        }
+        /*#endregion*/
+
+    /*#endregion*/
+
+    /*#region Selección de pallet*/
+        /*#region Título + Div general + Selección de unidades*/
+        .pallet-size{
+            display: block;
+            position: relative;
+            margin-top: 25px;
+            margin-right: 20%;
+            width: 300px;
+            background-color:#494a49;
+            border-color:#494a49 ;
+            border-radius: 10px;
+            padding-top: 5px;
+        }
+        .pallet-size h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            color: white;
+        }
+        .pallet-size h2{
+            margin-top:80px;
+            margin-left: 25px;
+            font-weight: bolder;
+            color: white;
+        }
+        #pallet-selection{
+            background-color: white;;
+            color: black;
+        }
+        .pallet-weight-input select{
+            position: absolute;
+            right: 0%;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 70px;
+            height: 25px;
+            margin-top: 256px;
+            margin-right: 15px;
+            padding-left: 20px;
+            background-color:#5e5e5e;
+            border-color:#494a49 ;
+            color: white;
+            border-radius: 10px;
+            outline: none;
+        }
+        .pallet-measurement-input select{
+            position: absolute;
+            right: 0%;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 70px;
+            height: 25px;
+            margin-top: 13px;
+            margin-right: 15px;
+            padding-left: 10px;
+            background-color:#5e5e5e;
+            border-color:#494a49 ;
+            color: white;
+            border-radius: 10px;
+            outline: none;
+        }
+        /*#endregion*/
+        
+        /*#region Desplegable de los pallets*/
+        .pallet-selection-input select{
+            margin-left: 25px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            width: 250px;
+            height: 35px;
+            padding-left: 20px;
+            background-color:#5e5e5e;
+            border-color:#494a49 ;
+            color: white;
+            border-radius: 10px;
+            outline: none;
+        }
+        .pallet-unit-input select{
+            right: 0%;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 70px;
+            height: 25px;
+            margin-top: 240px;
+            margin-right: 15px;
+
+            background-color:#5e5e5e;
+            border-color:#494a49 ;
+            color: white;
+            border-radius: 10px;
+            outline: none;
+        }
+        /*#endregion*/
+
+        /*#region Largo del pallet*/
+        .pallet-lenght h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .pallet-lenght input{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50%;
+            height: 25px;
+            margin-right: 20px;
+            float: left;
+            margin-left: 25px;
+            padding-left: 20px;
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+        .pallet-lenght select{
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Ancho del pallet*/
+        .pallet-width{
+            margin-top: 60px;
+        }
+        .pallet-width h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .pallet-width input{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50%;
+            height: 25px;
+            margin-right: 20px;
+            float: left;
+            margin-left: 25px;
+            padding-left: 20px;
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+        .pallet-width select{
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Alto del pallet*/
+        .pallet-height{
+            margin-top: 60px;
+        }
+        .pallet-height h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .pallet-height input{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50%;
+            height: 25px;
+            margin-right: 20px;
+            float: left;
+            margin-left: 25px;
+            padding-left: 20px;
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+        .pallet-height select{
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Masa del pallet*/
+        .pallet-mass{
+            margin-top: 60px;
+        }
+        .pallet-mass h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .pallet-mass input{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50%;
+            height: 25px;
+            margin-right: 20px;
+            float: left;
+            margin-left: 25px;
+            padding-left: 20px;
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+        .pallet-mass select{
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Carga del pallet*/
+        .pallet-load{
+            margin-top: 60px;
+        }
+        .pallet-load h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+        }
+        .pallet-load input{
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            width: 50%;
+            height: 25px;
+            margin-right: 20px;
+            float: left;
+            margin-left: 25px;
+            padding-left: 20px;
+            background-color:white;
+            border-color:#494a49 ;
+            color: black;
+            border-radius: 10px;
+            outline: none;
+        }
+        .pallet-load select{
+            border-color: grey;
+        }
+        /*#endregion*/
+
+        /*#region Continuar a colocación de cajas*/
+        .next-button-pallet-selection button{
+            font-family: 'Roboto', sans-serif;
+            margin-left: 10%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            width: 80%;
+            background-color:royalblue;
+            border-color:royalblue ;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+        .next-button-pallet-selection h1{
+            font-family: 'Roboto', sans-serif;
+            margin-left: 0px;
+        }
+        /*#endregion*/
+
+    /*#endregion*/ 
+
+    /*#region Colocación de las cajas*/
+
+        /*#region Posicionamiento de cajas*/
+            /*#region Título + Div general*/
+            .box-placement{
+                display: block;
+                position: relative;
+                margin-top: 25px;
+                margin-right: 20%;
+                width: 300px;
+                background-color:#494a49;
+                border-color:#494a49 ;
+                border-radius: 10px;
+                padding-top: 5px;
+            }
+            .box-placement h1{
+                margin-left: 25px;
+                font-weight: bolder;
+                color: white;
+            }
+            .box-placement h2{
+                margin-top:80px;
+                margin-left: 25px;
+                font-weight: bolder;
+                color: white;
+            }
+            
+
+            /*#endregion*/
+
+            /*#region Nombre del layer*/
+            #layer-name{
+                margin-left: 0%;
+                background-color: #FF8C00;
+                font-weight: bolder;
+                font-size: 20px;
+                color: black;
+                margin-bottom: 25px;
+                padding-left: 30%;
+            }
+            /*#endregion*/
+
+            /*#region Posición X de la caja*/
+            .box-pos-x{
+                position: absolute;
+                margin-top: -25px;
+                left: 0px;
+            }
+            .box-pos-x h1{
+                margin-left: 25px;
+                font-weight: bolder;
+                font-size: 18px;
+                color: white;
+            }
+            .box-pos-x input{
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                width: 20%;
+                height: 25px;
+                margin-right: 20px;
+                float: left;
+                margin-left: 25px;
+                padding-left: 20px;
+                background-color:grey;
+                border-color:#494a49 ;
+                color: black;
+                border-radius: 10px;
+                outline: none;
+            }
+            .box-pos-x select{
+                border-color: grey;
+            }
+            /*#endregion*/
+
+            /*#region Posición Y de la caja*/
+            .box-pos-y{
+                position: absolute;
+                margin-top: -25px;
+                right: -130px;
+            }
+            .box-pos-y h1{
+                margin-left: 25px;
+                font-weight: bolder;
+                font-size: 18px;
+                color: white;
+            }
+            .box-pos-y input{
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                width: 20%;
+                height: 25px;
+                margin-right: 20px;
+                float: left;
+                margin-left: 25px;
+                padding-left: 20px;
+                background-color:grey;
+                border-color:#494a49 ;
+                color: black;
+                border-radius: 10px;
+                outline: none;
+            }
+            .box-pos-y select{
+                border-color: grey;
+            }
+            /*#endregion*/
+
+            /*#region Rotación 90º de la caja*/
+            .rotate-box{
+                margin-top: 50px;
+            }
+
+            .rotate-box button{
+                font-family: 'Roboto', sans-serif;
+                margin-left: 20%;
+                margin-top: 50px;
+                margin-bottom: 20px;
+                width: 60%;
+                background-color:#727472;
+                border-color:#727472 ;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+            }
+            .rotate-box h1{
+                margin-left: 0px;
+            }
+            /*#endregion*/
+
+            /*#region Borrar la caja*/
+            .delete-box button{
+                font-family: 'Roboto', sans-serif;
+                margin-left: 20%;
+                margin-bottom: 20px;
+                width: 60%;
+                background-color:#727472;
+                border-color:#727472 ;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+            }
+            .delete-box h1{
+                margin-left: 0px;
+            }
+            /*#endregion*/
+            
+            /*#region Cambiar de piso*/
+            .change-layer button{
+                font-family: 'Roboto', sans-serif;
+                margin-top: 10%;
+                margin-left: 20%;
+                margin-bottom: 20px;
+                width: 60%;
+                background-color:#727472;
+                border-color:#727472 ;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+            }
+            .change-layer h1{
+                margin-left: 0px;
+            }
+            /*#endregion*/
+            
+            /*#region Copiar layer anterior*/
+            .copy-layer button{
+                font-family: 'Roboto', sans-serif;
+                margin-left: 20%;
+                margin-bottom: 20px;
+                width: 60%;
+                background-color:#727472;
+                border-color:#727472 ;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+            }
+            .copy-layer h1{
+                margin-left: 0px;
+            }
+            /*#endregion*/
+     
+            /*#region Espejo de layer*/
+            .mirror-layer button{
+                font-family: 'Roboto', sans-serif;
+                margin-left: 20%;
+                margin-bottom: 20px;
+                width: 60%;
+                background-color:#727472;
+                border-color:#727472 ;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+            }
+            .mirror-layer h1{
+                margin-left: 0px;
+            }
+            /*#endregion*/
+                 
+        /*#endregion*/
+
+        /*#region Control del layer*/
+
+            /*#region Título + Div general*/
+            .layer-control{
+                display: block;
+                position: relative;
+                margin-top: 25px;
+                margin-right: 20%;
+                width: 300px;
+                background-color:#494a49;
+                border-color:#494a49 ;
+                border-radius: 10px;
+                padding-top: 5px;
+            }
+            .layer-control h1{
+                margin-left: 25px;
+                font-weight: bolder;
+                color: white;
+            }
+            .layer-control h2{
+                margin-top:80px;
+                margin-left: 25px;
+                font-weight: bolder;
+                color: white;
+            }
+
+            /*#endregion*/
+
+            /*#region Magic pack*/
+            .magic-pack button{
+                font-family: 'Roboto', sans-serif;
+                margin-left: 20%;
+                margin-bottom: 20px;
+                width: 60%;
+                background-color:#727472;
+                border-color:#727472 ;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+            }
+            .magic-pack h1{
+                margin-left: 0px;
+            }
+            /*#endregion*/
+
+            /*#region Etiquetas hacia fuera*/
+            .faces-out button{
+                font-family: 'Roboto', sans-serif;
+                margin-left: 20%;
+                margin-bottom: 20px;
+                width: 60%;
+                background-color:#727472;
+                border-color:#727472 ;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+            }
+            .faces-out h1{
+                margin-left: 0px;
+            }
+            /*#endregion*/
+
+            /*#region Centrado de cajas*/
+            .allign button{
+                font-family: 'Roboto', sans-serif;
+                margin-left: 20%;
+                margin-bottom: 20px;
+                width: 60%;
+                background-color:#727472;
+                border-color:#727472 ;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+            }
+            .allign h1{
+                margin-left: 0px;
+            }
+            /*#endregion*/
+
+            /*#region Continuar a layers*/
+            .next-button-layers button{
+                font-family: 'Roboto', sans-serif;
+                margin-left: 10%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 80%;
+                background-color:royalblue;
+                border-color:royalblue ;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+            }
+            .next-button-layers h1{
+                font-family: 'Roboto', sans-serif;
+                margin-left: 0px;
+            }
+            /*#endregion*/
+        /*#endregion*/
+
+    /*#endregion*/
+
+    /*#region Configuración de los pisos*/
+
+        /*#region Layer specs*/
+            
+            /*#region Título + Div general*/
+            .layer-specs{
+                display: block;
+                position: relative;
+                margin-top: 25px;
+                margin-right: 20%;
+                width: 300px;
+                background-color:#494a49;
+                border-color:#494a49 ;
+                border-radius: 10px;
+                padding-top: 5px;
+            }
+            .layer-specs h1{
+                margin-left: 25px;
+                font-weight: bolder;
+                color: white;
+            }
+            .layer-specs h2{
+                margin-top:80px;
+                margin-left: 25px;
+                font-weight: bolder;
+                color: white;
+            }
+            /*#endregion*/
+
+            /*#region Dimensiones de la carga*/
+            .load-size h1{
+                margin-bottom: 5px;
+                margin-left: 25px;
+                font-weight: bolder;
+                font-size: 18px;
+                color: white;
+            }
+            .load-size input{
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                width: 75%;
+                height: 25px;
+                margin-right: 20px;
+                float: left;
+                margin-left: 25px;
+                padding-left: 20px;
+                background-color:grey;
+                border-color:#494a49 ;
+                color: black;
+                border-radius: 10px;
+                outline: none;
+                
+            }
+            .load-size select{
+                border-color: grey;
+            }
+            /*#endregion*/
+
+            /*#region Masa total*/
+            .total-mass{
+                margin-top: 50px;
+            }
+            .total-mass h1{
+                margin-bottom: 5px;
+                margin-left: 25px;
+                font-weight: bolder;
+                font-size: 18px;
+                color: white;
+            }
+            .total-mass input{
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                width: 50%;
+                height: 25px;
+                margin-right: 20px;
+                float: left;
+                margin-left: 25px;
+                padding-left: 20px;
+                background-color:grey;
+                border-color:#494a49 ;
+                color: black;
+                border-radius: 10px;
+                outline: none;
+            }
+            .total-mass select{
+                border-color: grey;
+            }
+            /*#endregion*/
+
+            /*#region Pisos totales*/
+            .total-layers{
+                margin-top: 50px;
+            }
+            .total-layers h1{
+                margin-bottom: 5px;
+                margin-left: 25px;
+                font-weight: bolder;
+                font-size: 18px;
+                color: white;
+            }
+            .total-layers input{
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                width: 50%;
+                height: 25px;
+                margin-right: 20px;
+                float: left;
+                margin-left: 25px;
+                padding-left: 20px;
+                background-color:grey;
+                border-color:#494a49 ;
+                color: black;
+                border-radius: 10px;
+                outline: none;
+            }
+            .total-layers select{
+                border-color: grey;
+            }
+            /*#endregion*/
+
+            /*#region Altura máxima*/
+            .max-height{
+                margin-top: 50px;
+            }
+            .max-height h1{
+                margin-bottom: 5px;
+                margin-left: 25px;
+                font-weight: bolder;
+                font-size: 18px;
+                color: white;
+            }
+            .max-height input{
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                width: 50%;
+                height: 25px;
+                margin-right: 20px;
+                float: left;
+                margin-left: 25px;
+                padding-left: 20px;
+                background-color:grey;
+                border-color:#494a49 ;
+                color: black;
+                border-radius: 10px;
+                outline: none;
+            }
+            .max-height select{
+                border-color: grey;
+            }
+            /*#endregion*/
+
+            /*#region Área efectiva*/
+            .efective-area{
+                margin-top: 50px;
+            }
+            .efective-area h1{
+                margin-bottom: 5px;
+                margin-left: 25px;
+                font-weight: bolder;
+                font-size: 18px;
+                color: white;
+            }
+            .efective-area input{
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                width: 50%;
+                height: 25px;
+                margin-right: 20px;
+                float: left;
+                margin-left: 25px;
+                padding-left: 20px;
+                background-color:grey;
+                border-color:#494a49 ;
+                color: black;
+                border-radius: 10px;
+                outline: none;
+            }
+            .efective-area select{
+                border-color: grey;
+            }
+            /*#endregion*/
+
+            /*#region Carga efectiva*/
+            .efective-load{
+                margin-top: 50px;
+                margin-bottom: 60px;
+            }
+            .efective-load h1{
+                margin-bottom: 5px;
+                margin-left: 25px;
+                font-weight: bolder;
+                font-size: 18px;
+                color: white;
+            }
+            .efective-load input{
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                width: 50%;
+                height: 25px;
+                margin-right: 20px;
+                float: left;
+                margin-left: 25px;
+                padding-left: 20px;
+                background-color:grey;
+                border-color:#494a49 ;
+                color: black;
+                border-radius: 10px;
+                outline: none;
+            }
+            .efective-load select{
+                border-color: grey;
+            }
+            /*#endregion*/
+
+            /*#region Interlayer*/
+            .interlayer-specs{
+                display: block;
+                position:fixed;
+                right: 10%;
+                top: 150px;
+                background-color:#494a49;
+                border-color:#494a49 ;
+                border-radius: 10px;
+                padding-top: 5px;
+                padding-bottom: 15px;
+            }
+            .interlayer-specs h1{
+                margin-left: 25px;
+                font-weight: bolder;
+                color: white;
+            }
+            .interlayer h1{
+                padding-top: 5px;
+                margin-left: 25px;
+                font-weight: bolder;
+                font-size: 18px;
+                color: white;
+            }
+            .interlayer input{
+                margin-left: 15px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                width: 50px;
+                height: 25px;
+                float: left;
+
+                background-color:white;
+                border-color:#494a49 ;
+                color: black;
+                border-radius: 10px;
+                outline: none;
+            }
+            .interlayer input, :checked{
+                padding-left: 20px;
+                border-color: grey;
+            }
+            /*#endregion*/
+
+            /*#region Ancho del interlayer*/
+            .interlayer-width h1{
+                margin-top: 25px;
+                margin-bottom: 5px;
+                margin-left: 25px;
+                font-weight: bolder;
+                font-size: 18px;
+                color: white;
+            }
+            .interlayer-width input{
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                width: 50%;
+                height: 25px;
+                margin-right: 20px;
+                float: left;
+                margin-left: 25px;
+                padding-left: 20px;
+                background-color:white;
+                border-color:#494a49 ;
+                color: black;
+                border-radius: 10px;
+                outline: none;
+            }
+            .interlayer-width select{
+                border-color: grey;
+            }
+            /*#endregion*/
+
+            /*#region Continuar a exportación*/
+            .next-button-export button{
+                font-family: 'Roboto', sans-serif;
+                margin-left: 10%;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                width: 80%;
+                background-color:royalblue;
+                border-color:royalblue ;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+            }
+            .next-button-export h1{
+                font-family: 'Roboto', sans-serif;
+                margin-left: 0px;
+            }
+            /*#endregion*/
+
+            /*#region Slider de los pisos*/
+            .slider-layers{
+                display: block;
+                position: relative;
+                margin-left: 10%;
+            }
+            
+            .slider {
+                float: right;
+                width: 620px;
+                margin-top:-335px;
+                margin-right: -350px;
+                -webkit-appearance: none;  
+                transform: rotate(270deg);
+                background-color:#494a49;
+                border-color:#494a49 ;
+                color: black;
+                border-radius: 10px;
+                outline: none;
+            }
+
+            .slider::-webkit-slider-runnable-track {
+                height: 50px;
+                background: #494a49;
+                border: none;
+                border-radius: 10px;
+            }
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                border: none;
+                height: 50px;
+                width: 20px;
+                border-radius: 10px;
+                background: #FF8C00;
+            }
+
+            /*#endregion*/
+
+        /*#endregion*/
+
+    /*#endregion*/
+
+    /*#region Opciones*/
+        /*#region Título + Div general + Imagen*/
+        .options{
+            display: block;
+            position: absolute;
+            top: 140px;
+            right: 10%;
+            width: 350px;
+            background-color:#494a49;
+            border-color:#FF8C00 ;
+            border-radius: 10px;
+            padding-top: 5px;
+        }
+        .options h1{
+            margin-left: 25px;
+            font-weight: bolder;
+            color: white;
+        }
+        .options h2{
+            margin-top:80px;
+            margin-left: 25px;
+            font-weight: bolder;
+            color: white;
+        }
+        .options img{
+            margin-left: 10%;
+            margin-right: 10%;
+            position: absolute;
+            width: 50px;
+            border-radius: 10px;
+        }
+        /*#endregion*/
+
+        /*#region Switch de cambio de idioma*/
+        .switchLanguage {
+            position: relative;
+            display: inline-block;
+            width: 110px;
+            height: 34px;
+            margin-left: 35%;
+            margin-bottom: 50px;
+            margin-top: 10px;
+        }
+        .switchLanguage input {display:none;}
+        .slide {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            padding: 8px;
+            color: #fff;
+            border-radius: 34px;
+        }
+        .slide:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 78px;
+            bottom: 4px;
+            background-color: #FF8C00;
+            border-radius: 34px;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        .switchLanguage input:checked + .slide:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+            left: -20px;
+        }
+        /*#endregion*/
+
+    /*#endregion*/
+
+/*#endregion*/
+
+/*#region Consola de mensajes*/
+.console-messages{
+    display: none;
+    position: fixed;
+    right: 10%;
+    bottom: 5%;
+    width: 25%;
+    text-align: center;
+    background-color:#323332;
+    border-color:#494a49 ;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px
+}
+.console-messages img{
+    display: inline;
+    width: 20px;
+    padding-right: 5%;  
+}
+.console-messages h1{
+    position: relative;
+    display: inline;
+    width: 30px;  
+    bottom: 2px; 
+    vertical-align: auto;
+    color: green;
+    font-size: 20px;
+}
+/*#endregion*/
+
+/*#region Usuario*/
+.user-ID{
+    display: block;
+    position: absolute;
+    left: 20%;
+    top: 6%;
+    width: 10%;
+    text-align: center;
+    background-color:#323332;
+    border-color:#494a49 ;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+.user-ID img{
+    display: inline;
+    width: 20px;
+    padding-right: 5%;  
+}
+.user-ID h1{
+    position: relative;
+    display: inline;
+    width: 30px;  
+    bottom: 2px; 
+    vertical-align: auto;
+    color: white;
+    font-size: 20px;
+}
+/*#endregion*/
+
+/*#region Inicio de sesión*/
+.login-interface{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 40px;
+    text-align: center;
+    background-color:#494a49;
+    border-color:#494a49 ;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.login-interface h2{
+    color: white;
+}
+.user-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 15%;
+}
+.login-interface input{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    width: 50%;
+    height: 25px;
+    margin-right: 20px;
+    padding-left: 20px;  
+    background-color:white;
+    border-color:#494a49 ;
+    color: black;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 25px;
+}
+.login-button button{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+    background-color:#FF8C00;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+#console-message{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    width: 50%;
+    height: 25px;
+    margin-right: auto;
+    padding-left: auto;  
+    background-color:#494a49;
+    border-color:#494a49 ;
+    color: red;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 25px;
+}
+
+/*#endregion*/
+
+/*#region Importación de proyecto*/
+.import-window{
+    position:fixed;
+    top: 50px;
+    left: 95px;
+    right: 20px;
+    bottom: 60px;
+    background-color: #262626;
+}
+.list-projects{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.import-window-button{
+    display: none;
+    width: 20%;
+    background-color:#2c59ad;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    color: white;
+    font-size: 100%;
+    height: 40px;
+}
+.close-import{
+    position: absolute;
+    background-color: #262626;
+    border: none;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 15px;
+}
+.close-import:hover{
+    position: absolute;
+    background-color: #262626;
+    border: none;
+}
+
+.close-import img{
+    width: 25px;
+    height: 25px;
+}
+/*#endregion*/
+
+/*#region Interacciones generales*/
+button:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+input{
+    border: none;
+}
+.next-button-project-description button:hover{
+    background-color: green;
+}
+.next-button-box-size button:hover{
+    background-color: green;
+}
+.next-button-pallet-selection button:hover{
+    background-color: green;
+}
+.next-button-box-placement button:hover{
+    background-color: green;
+}
+.next-button-layers button:hover{
+    background-color: green;
+}
+.next-button-export button:hover{
+    background-color: green;
+}
+.export-UR10 button:hover{
+    background-color: green;
+}
+.export-UR16 button:hover{
+    background-color: green;
+}
+.export-CR10 button:hover{
+    background-color: green;
+}
+.export-CR16 button:hover{
+    background-color: green;
+}
+a {
+     text-decoration: none; 
+}
+.login-button button:hover{
+    background-color: green;
+}
+
+/*#endregion*/
+
+/*#region Escenas*/
+#scene-box-size{
+    display: block;
+    position: absolute;
+}
+#scene-layer{
+    display: block;
+    position: absolute;
+}
+#scene-box-placement{
+    display: block;
+    position: absolute;
+    width: 80%;
+}
+#scene-pallet-selection{
+    display: block;
+    position: absolute;
+}
+/*#endregion*/
+
+/*#region Ocultar flechas de cambio en input.*/
+/*Chrome, Safari, Edge, Opera*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*Firefox*/
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*#endregion*/
+
+/*#region Loader*/
+.loader {
+    display: none;
+    position: fixed;
+    bottom: 40%;
+    left: 45%;
+    border: 30px solid #f3f3f3; 
+    border-top: 30px solid #3498db; 
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+/*#endregion*/
+
+/*#region Versión*/
+.version{
+    position: fixed;
+    color: #FF8C00;
+    bottom: 0%;
+    right: 5%;
+    font-size: 6px;;
+}
+.version-project{
+    position: fixed;
+    color: black;
+    bottom: 0%;
+    right: 5%;
+    font-size: 6px;;
+}
+/*#endregion*/

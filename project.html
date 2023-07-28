@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paletizador Conecta2 | New project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="js/GUI_management.js"></script>
+    <script src="js/download.js"></script>   
+  </head>
+  <body>
+      <header>
+        <div class="social">
+            <div class="social-left">
+                <a href="https://www.linkedin.com/company/conecta-2-automation-s-l/"><img src="social_icons/linkedin.png" alt="linkedin"></a>
+                <a href="https://www.youtube.com/channel/UCfhI-iV1NYKSDu3VbGg741w"><img src="social_icons/youtube.png" alt="youtube"></a>
+                <a href="https://www.instagram.com/conecta2automation/"><img src="social_icons/Instagram.png" alt="instagram"></a>
+                <img src="social_icons/mail.png" alt="mail">
+                <h1>info@conecta-2.es</h1> 
+            </div>
+            <div class="social-right">
+                <a href="https://www.google.com/maps/place/Conecta2+Automation+SL/@41.567298,1.66257,17z/data=!3m1!4b1!4m5!3m4!1s0x12a4686d0e5bd8a1:0x902cd33f12a00342!8m2!3d41.567294!4d1.664764"><img src="social_icons/maps.png"></a>
+                <h1>+34 935 991 553</h1>
+            </div>    
+        </div>
+      </header>
+
+      <script>
+        function preventBehavior(e) {
+            e.preventDefault(); 
+        };
+
+        document.addEventListener("touchmove", preventBehavior, {passive: false});
+      </script>
+
+      <div class="scene-box-size" id="scene-box-size">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+        <script type="module" src="js/scene-box-size.js"></script>
+      </div>
+      <div class="scene-pallet-selection" id="scene-pallet-selection">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+        <script src="js/DragControls.js"></script>
+        <script type="module" src="js/scene-pallet-selection.js"></script>
+      </div>
+      <div class="scene-box-placement" id="scene-box-placement">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+        <script src="js/scene-box-placement.js"></script>
+      </div>
+      <div class="scene-layer" id="scene-layer">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+        <script type="module" src="js/scene-layers.js"></script>
+      </div>
+
+      <section id="superior-nav">
+        <!--Navegador superior-->
+        <div class="nav-bar">
+            <!--Definición de la caja-->
+            <div class="box-size-nav">
+              <button class="box-size-nav-button" type="button"><img src="nav_icons/box.png" onclick="activeBoxSize()"></button>
+            </div>
+            <!--Selección de pallet-->
+            <div class="pallet-selection-nav">
+              <button class="pallet-selection-nav-button" type="button"><img src="nav_icons/pallet.png" onclick="activePalletSelection()"></button>
+            </div>
+            <!--Ubicación de las cajas-->
+            <div class="box-placement-nav">
+              <button class="box-placement-nav-button" type="button"><img src="nav_icons/placement.png" onclick="activeBoxPlacement()"></button>
+            </div>
+            <!--Selección de pisos-->
+            <div class="layers-nav">
+              <button class="layers-nav-button" id="layers-nav-button" type="button"><img src="nav_icons/layer.png" onclick="activeLayers()"></button>
+            </div>
+        </div>
+
+        <!--Botón para volver a la descripción del proyecto-->
+        <div class="back">
+            <button type="button" onclick="backDisplay()"><img src="nav_icons/back_arrow.png"><h1>Back</h1></button>
+        </div> 
+
+        <!--Botones de configuración-->
+        <div class="configuration">
+            <button class="options-button" type="button" onclick="activeOptions()"><img src="nav_icons/config.png"></button>
+        </div>
+
+        <!--Opciones-->
+        <div class="options">
+          <!--Selección de idioma-->
+          <div class="project-name">
+            <h1>Language</h1>
+            <img src="nav_icons/spa.png">
+            <label class="switchLanguage">
+              <input type="checkbox">
+              <div class="slide"></div>
+            </label>
+            <img src="nav_icons/eng.png">
+          </div>
+        </div>
+
+      </section>
+
+      <section id="gui-elements">      
+
+        <!--Descripción del proyecto-->
+        <div class="project-description">
+          <!--Nombre del proyecto-->
+          <div class="project-name">
+            <h1>Project name</h1>
+            <input type="text" id="project-title">
+          </div>
+          <!--Texto del proyecto-->
+          <div class="project-text">
+            <h1>Description</h1>
+            <textarea id="project-textarea" rows="8" cols="200"></textarea>
+          </div>
+          <!--Botón de continuar a configuración de cajas-->
+          <div class="next-button-project-description">
+              <button type="button" onclick="activeBoxSize()"><h1>Next</h1></button>
+          </div>
+        </div>
+
+
+
+
+        <!--Tamaño de caja-->
+        <div class="box-size">
+          <h1>Box size</h1>   
+          <!--Input para las unidades de longitud-->
+          <div class="unit-mesurement-input">
+              <select id="unit-measurement">
+                  <option value="1"><h1>mm</h1></option>
+                  <option value="2"><h1>in</h1></option>
+              </select>
+          </div>
+
+          <!--Input para las unidades de peso-->
+          <div class="unit-weight-input">
+              <select id="weight-measurement">
+                  <option value="1"><h1>kg</h1></option>
+                  <option value="2"><h1>lbs</h1></option>
+              </select>
+          </div>
+          
+          <!--Largo de caja-->
+          <div class="box-lenght">
+              <h1>Lenght</h1>
+              <input type="number" step='0.01' id="box-lenght" name="box-lenght" placeholder="Introduce lenght..." pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;"/>
+          </div>
+          <!--Ancho de caja-->
+          <div class="box-width">
+              <h1>Width</h1>
+              <input type="number" step='0.01' id="box-width" name="box-lenght" placeholder="Introduce width..." pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;"/>
+          </div>
+          <!--Alto de caja-->
+          <div class="box-height">
+              <h1>Height</h1>
+              <input type="number" step='0.01' id="box-height" name="box-height" placeholder="Introduce height..." pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;"/>
+          </div>
+          <!--Masa de caja-->
+          <div class="box-mass">
+              <h1>Mass</h1>
+              <input type="number" step='0.01' id="box-mass" name="box-mass" placeholder="Introduce mass..." pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;"/>
+          </div>
+          <h2>Labels</h2>
+          <!--Etiqueta frontal-->
+          <div class="front-label">
+              <input type="checkbox"  id="front-label">
+              <h1>Front label</h1>
+          </div>
+          <!--Etiqueta derecha-->
+          <div class="right-label">
+              <input type="checkbox"  id="right-label">
+              <h1>Right label</h1>
+          </div>
+          <!--Etiqueta izquierda-->
+          <div class="left-label">
+              <input type="checkbox"  id="left-label">
+              <h1>Left label</h1>
+          </div>
+          <!--Etiqueta trasera-->
+          <div class="back-label">
+              <input type="checkbox"  id="back-label">
+              <h1>Back label</h1>
+          </div>
+          <!--Botón de continuar a configuración del pallet-->
+          <div class="next-button-box-size">
+              <button type="button" onclick="activePalletSelection()"><h1>Next</h1></button>
+          </div>
+      </div>
+
+
+
+
+      <!--Selección de pallet-->
+      <div class="pallet-size">
+        <h1>Pallet selection</h1>   
+        <!--Input para las unidades de longitud-->
+        <div class="pallet-selection-input">
+            <select id="pallet-selection">
+                <option value="1"><h1>EPAL EURO Pallet</h1></option>
+                <option value="2"><h1>EPAL 2 Pallet</h1></option>
+                <option value="3"><h1>EPAL 3 Pallet</h1></option>
+                <option value="4"><h1>EPAL 6 Pallet</h1></option>
+                <option value="5"><h1>USA 48x40</h1></option>
+                <option value="6"><h1>USA 42x42</h1></option>
+                <option value="7"><h1>Custom pallet...</h1></option>
+            </select>
+        </div>  
+
+        <!--Input para las unidades de longitud-->
+        <div class="pallet-measurement-input">
+            <select id="pallet-measurement">
+                <option value="1"><h1>mm</h1></option>
+                <option value="2"><h1>in</h1></option>
+            </select>
+        </div>
+        <div class="pallet-weight-input">
+          <select id="pallet-weight">
+              <option value="1"><h1>kg</h1></option>
+              <option value="2"><h1>lbs</h1></option>
+          </select>
+      </div>
+
+        <!--Largo del pallet-->
+        <div class="pallet-lenght">
+            <h1>Lenght</h1>
+            <input type="number" step='0.01' id="pallet-lenght" name="pallet-lenght" placeholder="Introduce lenght..." pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;"/>
+        </div>    
+        <!--Ancho del pallet-->
+        <div class="pallet-width">
+            <h1>Width</h1>
+            <input type="number" step='0.01' id="pallet-width" name="pallet-width" placeholder="Introduce width..." pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;"/>
+        </div> 
+        <!--Largo del pallet-->
+        <div class="pallet-height">
+            <h1>Height</h1>
+            <input type="number" step='0.01' id="pallet-height" name="pallet-height" placeholder="Introduce height..." pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;" />
+        </div> 
+        <!--Masa del pallet-->
+        <div class="pallet-mass">
+            <h1>Mass</h1>
+            <input type="number" step='0.01' id="pallet-mass" name="pallet-mass" placeholder="Introduce mass..." pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;"/>
+        </div> 
+        <!--Carga del pallet-->
+        <div class="pallet-load">
+            <h1>Load</h1>
+            <input type="number" step='0.01' id="pallet-load" name="pallet-load" placeholder="Introduce load..." pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==5) return false;"/>
+        </div> 
+        <!--Botón de continuar a posicionamiento de cajas-->
+        <div class="next-button-pallet-selection">
+            <button type="button" onclick="activeBoxPlacement()"><h1>Next</h1></button>
+        </div>
+      </div>
+
+
+
+      <!--Colocación de las cajas-->
+      <div class="box-placement">
+        <h1>Box placement</h1>   
+        <div clas="layer-name">
+          <h1 id="layer-name">ODD LAYER</h1>
+        </div>
+        <!--Posición X de la caja seleccionada-->
+        <div class="box-pos-x">
+            <h1>Position X:</h1>
+            <input type="number" id="position-x" name="position-x" placeholder="..."/>
+        </div> 
+        <!--Posición X de la caja seleccionada-->
+        <div class="box-pos-y">
+            <h1>Position Y:</h1>
+            <input type="number" id="position-y" name="position-y" placeholder="..."/>
+        </div> 
+        <!--Botón para rotar la caja-->
+        <div class="rotate-box"> 
+            <button type="button" onclick="rotateBox()"><h1>Rotate 90º</h1></button>
+        </div>
+        <!--Botón para borrar la caja-->
+        <div class="delete-box">
+            <button type="button" onclick="destroyBox()"><h1>Delete box</h1></button>
+        </div>
+        <!--Magic pack-->
+        <div class="magic-pack">
+          <button type="button" onclick="magicBuild()"><h1>Magic pack</h1></button>
+        </div>
+        <!--Botón para cambiar de piso-->
+        <div class="change-layer">
+            <button type="button" onclick="changeLayer()"><h1>Change layer</h1></button>
+        </div>
+        <!--Botón para copiar el piso anterior-->
+        <div class="copy-layer">
+            <button type="button" onclick="copyPreviousLayer()"><h1>Paste previous layer</h1></button>
+        </div>
+        <!--Botón para girar en espejo el layer-->
+        <div class="mirror-layer">
+            <button type="button" onclick="mirrorLayer()"><h1>Mirror layer</h1></button>
+        </div>
+        <!--Botón de continuar a layers-->
+        <div class="next-button-layers">
+          <button id="next-button-layers" type="button" onclick="activeLayers()"><h1>Next</h1></button>
+        </div>
+      </div>
+      
+
+
+      <!--Colocación de las cajas-->
+      <div class="layer-control">
+        <h1>Layer control</h1>   
+        <!--Magic pack-->
+        <div class="magic-pack">
+            <button type="button"><h1>Magic pack</h1></button>
+        </div>
+        <!--Etiquetas hacia fuera-->
+        <div class="faces-out">
+            <button type="button"><h1>Labels out</h1></button>
+        </div>
+        <!--Centrado de las cajas-->
+        <div class="allign">
+            <button type="button"><h1>Centrate pallet</h1></button>
+        </div>
+      </div>
+
+
+
+      <!--Dimensiones del pallet-->
+      <div class="layer-specs">
+          <h1>Layer specs</h1>   
+          <!--Dimensiones de la carga-->
+          <div class="load-size">
+              <h1>Load size</h1>
+              <input type="text" id="absolute-size" name="absolute-size" placeholder="..."/>
+          </div>
+          <!--Masa total-->
+          <div class="total-mass">
+              <h1>Total mass</h1>
+              <input type="text" id="absolute-mass" name="absolute-mass" placeholder="..."/>
+          </div>
+          <!--Total de pisos-->
+          <div class="total-layers">
+              <h1>Layers</h1>
+              <input type="text" id="absolute-layers" name="absolute-layers" placeholder="..."/>
+          </div>
+          <!--Altura máxima-->
+          <div class="max-height">
+              <h1>Max. height</h1>
+              <input type="text" id="absolute-height" name="absolute-height" placeholder="..."/>
+          </div>
+          <!--Área efectiva-->
+          <div class="efective-area">
+              <h1>Effective area</h1>
+              <input type="text" id="absolute-area" name="absolute-area" placeholder="..."/>
+          </div>
+          <!--Carga efectiva-->
+          <div class="efective-load">
+              <h1>Effective load</h1>
+              <input type="text" id="absolute-load" name="absolute-load" placeholder="..."/>
+          </div>
+          <!--Botón de continuar a exportación-->
+          <div class="next-button-export">
+              <button type="text" onclick="boxOrder()"><h1>Export project</h1></a></button>
+          </div>
+        </div>
+      </div>
+
+      <!--Interlayer-->
+      <div class="interlayer-specs">
+        <!--Activación del interlayer-->
+        <h1>Interlayer specs</h1>   
+        <div class="interlayer">
+          <input type="checkbox"  id="interlayer-check">
+          <h1>Interlayer</h1>
+        </div>
+              
+        <!--Ancho del interlayer-->
+        <div class="interlayer-width">
+          <h1>Interlayer width</h1>
+          <input type="number" id="interlayer-size" name="interlayer-size" placeholder="..."/>
+        </div>
+      </div>
+
+      <!--Slider con los pisos-->
+      <div class="slider-layers">
+        <input id="slider-layer" class="slider" type="range" step="1" value="1" min="1" max="10">
+      </div>
+
+      <!--Navegador del Cloud-->
+      <div class="cloud-navigator">
+        <!--Guardar proyecto-->
+        <div class="save-project">
+          <button class="save-project-button" type="button" onclick="saveData()"><img src="nav_icons/save_cloud.png"></button>
+          <h1>Save</h1>
+        </div>
+        <!--Importar proyecto-->
+        <div class="import-project">
+          <button class="import-project-button" type="button" onclick="activeImport()"><img src="nav_icons/import-cloud.png"></button>
+          <h1>Import</h1>
+        </div>
+      </div>
+
+      
+      <!--Ventana de importación de proyecto-->
+      <div class="import-window">
+        <div class="list-projects">
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>          
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>          
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>          
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>
+          <button class="import-window-button" type="button" onclick="loadProjectVars(this.firstChild.data)">Project name</button>          
+        </div>
+        <button class="close-import" onclick="activeImport()"><img src="nav_icons/close.png"></button>
+      </div>
+    </div>
+
+    </section>
+
+    <!--Consola de mensajes-->
+    <div id="console-messages" class="console-messages">
+      <img src="nav_icons/info.png">
+      <h1 id="message-h1">Message displayed</h1>     
+    </div>
+
+    <!--Usuario-->
+    <div class="user-ID">
+      <img src="social_icons/user_logo.png">
+      <h1 id="username-h1">User</h1>     
+    </div>
+
+    <footer>
+      <p>Conecta2 Automation, Copyright &copy; 2020</p>
+    </footer>
+
+    <script>
+      loadAllDivs();
+      loadAllScenes();
+      activeProjectDescription();
+      assignUser();
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script id="cloudScript" src="js/cloudManagement.js"></script>
+
+    <!--Loader-->
+    <div class="loader" id="loader"></div>
+
+    <!--Versión-->
+    <div class="version-project">
+      <h1>Version 1.0.0</h1>
+    </div>
+    
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.17/jquery-ui.min.js"></script>
+    
+  </body>
+</html>
+

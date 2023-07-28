@@ -1,0 +1,156 @@
+---HTML---
+<div class="login-interface">
+    <h2>Name</h2>
+    <input type="NameTBox" id="NameTBox" type="text" oninput="Update(this.value,'name')"><br>
+    <h2>RollNo</h2>
+    <input type="RollTBox" id="RollTBox" type="text" oninput="Update(this.value,'roll')">
+    <h2>Section</h2>
+    <input type="SecTBox" id="SecTBox" type="text" oninput="Update(this.value,'sec')"><br>
+    <h2>Gender</h2>
+    <input type="GenTBox" id="GenTBox" type="text" oninput="Update(this.value,'gen')">
+
+    <div class="login-button">
+        <button id="insertBtn" type="button"><h1>Insert</h1></button>
+        <button id="selectBtn" type="button"><h1>Select</h1></button>
+        <button id="updateBtn" type="button"><h1>Update</h1></button>
+        <button id="deleteBtn" type="button"><h1>Delete</h1></button>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+
+<script id="MainScript" src="login.js"></script>
+
+---JS---
+let NameT = document.getElementById('NameTBox');
+let RollT = document.getElementById('RollTBox');
+let SecT = document.getElementById('SecTBox');
+let GenT = document.getElementById('GenTBox');
+
+let nameV, rollV, secV, genV;
+
+function Update(val,type){
+    if(type=='name'){
+        nameV=val;
+    }
+    else if(type=='roll'){
+        rollV=val;
+    }
+    else if(type=='sec'){
+        secV=val;
+    }
+    else if(type=='gen'){
+        genV=val;
+    }
+}
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCkMCPUWBoN73OmkJlVWxsHCKQ1CwCvN5I",
+    authDomain: "paletizadoconecta2.firebaseapp.com",
+    projectId: "paletizadoconecta2",
+    storageBucket: "paletizadoconecta2.appspot.com",
+    messagingSenderId: "93810371335",
+    appId: "1:93810371335:web:24cb3e01f60f9fb2a2f3a2"
+};
+
+
+firebase.initializeApp(firebaseConfig);
+let cloudDB = firebase.firestore();
+
+//#region Escritura de datos.
+function addData(){
+    cloudDB.collection("Students").doc(rollV).set(
+        {
+            NameOfStd: nameV,
+            RollNo: Number(rollV),
+            Section: secV,
+            Gender: genV
+        }
+    )
+    .then(function(docRef){
+        console.log("Document written with ID" , docRef.id);
+    })
+    .catch(function(error){
+        console.error("Error adding document", error);
+    })
+}
+//#endregion
+
+//#region Actualización de datos.
+function updateData(){
+    cloudDB.collection("Students").doc(rollV).update(
+        {
+            NameOfStd: nameV,
+            RollNo: Number(rollV),
+            Section: secV,
+            Gender: genV
+        }
+    )
+    .then(function(docRef){
+        console.log("Document updated with ID" , docRef.id);
+    })
+    .catch(function(error){
+        console.error("Error updating document", error);
+    })
+}
+//#endregion
+
+//#region Borrar datos.
+function deleteData(){
+    cloudDB.collection("Students").doc(rollV).delete(
+        {
+            NameOfStd: nameV,
+            RollNo: Number(rollV),
+            Section: secV,
+            Gender: genV
+        }
+    )
+    .then(function(docRef){
+        console.log("Document deleted with ID" , docRef.id);
+    })
+    .catch(function(error){
+        console.error("Error deleting document", error);
+    })
+}
+//#endregion
+
+//#region Leer datos.
+function readData(){
+    cloudDB.collection("Students").doc(rollV).get() 
+    .then(function(doc){
+        if(doc.exists){
+            var name = doc.data().NameOfStd;
+
+            console.log(name)
+
+
+            document.getElementById('NameTBox').value = name;
+            document.getElementById('SecTBox').value = doc.data().Section;
+            document.getElementById('GenTBox').value = doc.data().Gender;              
+        }
+        else{
+            console.log("Document does not exist.")
+        }            
+    })
+    .catch(function(error){
+        console.log("Error", error);
+    })
+}
+//#endregion 
+document.getElementById('insertBtn').onclick=function(){
+    addData();
+};
+document.getElementById('selectBtn').onclick=function(){
+    readData();
+};
+document.getElementById('updateBtn').onclick=function(){
+    updateData();
+};
+document.getElementById('deleteBtn').onclick=function(){
+    deleteData();
+};
+
+
