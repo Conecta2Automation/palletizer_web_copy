@@ -19,13 +19,13 @@ function Update(val,type){
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB_ZSmdzndA7Fj1tVFxueCUuOEB9ncJxvE",
-    authDomain: "paletizer.firebaseapp.com",
-    projectId: "paletizer",
-    storageBucket: "paletizer.appspot.com",
-    messagingSenderId: "467515410351",
-    appId: "1:467515410351:web:5b535ba02db2dd6cf8515a"
-  };
+  apiKey: "AIzaSyDXs__Tu3JMYDU8r_OwBcIDdI6UPNmrWUI",
+  authDomain: "paletizadoconecta2-209c3.firebaseapp.com",
+  projectId: "paletizadoconecta2-209c3",
+  storageBucket: "paletizadoconecta2-209c3.appspot.com",
+  messagingSenderId: "455980798802",
+  appId: "1:455980798802:web:d5ea6cd93ff0e276f2208b"
+};
 
 
 firebase.initializeApp(firebaseConfig);
