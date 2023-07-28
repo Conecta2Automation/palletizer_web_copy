@@ -17,6 +17,7 @@ function Update(val,type){
     }
 }
 
+import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDXs__Tu3JMYDU8r_OwBcIDdI6UPNmrWUI",
@@ -26,7 +27,7 @@ const firebaseConfig = {
   messagingSenderId: "455980798802",
   appId: "1:455980798802:web:d5ea6cd93ff0e276f2208b"
 };
-
+const app = initializeApp(firebaseConfig)
 
 firebase.initializeApp(firebaseConfig);
 let cloudDB = firebase.firestore();
