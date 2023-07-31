@@ -1,5 +1,5 @@
 //Importación de OrbitControls.
-import {OrbitControls} from "./OrbitControls.js";
+//import {OrbitControls} from "./OrbitControls.js";
 
 //Creación de la escena.
 const scene = new THREE.Scene();
@@ -20,7 +20,7 @@ container.appendChild( renderer.domElement );
 
 //Controles de la cámara.
 camera.up.set( 0, 0, 1 );
-controls = new OrbitControls( camera, renderer.domElement );
+controls = new THREE.OrbitControls( camera, renderer.domElement );
 
 //#region Variables de los inputs.
 var boxLenght = 400;
