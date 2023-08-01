@@ -11,6 +11,9 @@ import {
 	MathUtils
 } from 'three';
 
+../three.module.js
+
+
 // OrbitControls performs orbiting, dollying (zooming), and panning.
 // Unlike TrackballControls, it maintains the "up" direction object.up (+Y by default).
 //
