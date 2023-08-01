@@ -1,3 +1,6 @@
+  import * as THREE from 'three';
+  import 'three/examples/js/controls/OrbitControls';
+
 //Creación de la escena.
 const scene = new THREE.Scene();
 scene.background = new THREE.Color( 0x000000 );
